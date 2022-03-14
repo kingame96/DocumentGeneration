@@ -37,5 +37,5 @@ Initial release.
 - Improve alt + C: auto detect and add function name to Function Name field.
 - Add alt + Z.
 
-### 0.0.3
+### 0.0.4
 - Update readme.md
