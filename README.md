@@ -4,16 +4,20 @@ DocGen is a VSCode's extension helping generate comment for C/C++ using shortcut
 
 ## Features
 
-Alt + Z: /********** Comment String *********/
-![Attribute](images/GenerateComment.gif)
+Alt + Z: 
+![Alt+Z](images/GenerateComment.gif)
+- /********** Comment String *********/
 - Total length of comment is 60, 80, 100, ... depend on the length of Comment String.
 
-Alt + X: /********** Comment String **********/
+Alt + X: 
+![Alt+X](images/GenerateComment2.gif)
+- /********** Comment String **********/
 - Addittional 20 "*", 2 "/" and 2 " " will be added to Comment String/
 
 Alt + C: Generate function description.
+![Alt+C](images/GenerateComment3.gif)
 
-Alt + V: 
+Alt + V: re-arrange comment line
 
 ## Requirements
 
