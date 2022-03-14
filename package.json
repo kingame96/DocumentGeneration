@@ -3,7 +3,7 @@
 	"displayName": "DocGen",
 	"publisher": "truongthinh",
 	"description": "",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"engines": {
 		"vscode": "^1.65.0"
 	},
@@ -41,6 +41,10 @@
                 "key": "alt+B"
             }
         ]
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kingame96/DocumentGeneration"
 	},
 	"scripts": {
 		"lint": "eslint .",

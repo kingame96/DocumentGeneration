@@ -5,7 +5,7 @@ DocGen is a VSCode's extension helping generate comment for C/C++ using shortcut
 ## Features
 
 Alt + Z: 
- ![Alt+Z](images/GenerateComment.gif)
+ ![Alt+Z](images/generateComment.gif)
 - /********** Comment String *********/
 - Total length of comment is 60, 80, 100, ... depend on the length of Comment String.
 
@@ -36,3 +36,6 @@ Initial release.
 
 - Improve alt + C: auto detect and add function name to Function Name field.
 - Add alt + Z.
+
+### 0.0.3
+- Update readme.md
