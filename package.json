@@ -1,66 +1,125 @@
 {
-  "name": "docgen",
+	"name": "docgen",
 	"displayName": "DocGen",
 	"publisher": "truongthinh",
-	"description": "",
-	"version": "0.0.4",
+	"description": "DocGen is a VSCode's extension helping generate comment for C/C++ using shortcut.",
+	"version": "1.0",
 	"engines": {
-		"vscode": "^1.65.0"
+	  "vscode": "^1.65.0"
 	},
 	"categories": [
-		"Other"
+	  "Other"
 	],
 	"activationEvents": [
-        "onCommand:docgen.replaceWithVaryLength",
-		"onCommand:docgen.replaceWithFixedLength",
-		"onCommand:docgen.genFunctionDesc",
-		"onCommand:docgen.genSingleLineFuncDes",
-		"onCommand:docgen.test"
+	  "onCommand:docgen.replaceWithVaryLength",
+	  "onCommand:docgen.replaceWithFixedLength",
+	  "onCommand:docgen.genFunctionDesc",
+	  "onCommand:docgen.genSingleLineFuncDes",
+	  "onCommand:docgen.genDefinition",
+	  "onCommand:docgen.shortcutInfo",
+	  "onCommand:docgen.genHeaderFile",
+	  "onCommand:docgen.genSourceFile",
+	  "onCommand:docgen.genClass"
 	],
 	"main": "./extension.js",
 	"contributes": {
-		"keybindings": [
-            {
-                "command": "docgen.replaceWithVaryLength",
-                "key": "alt+Z"
-            },
-			{
-                "command": "docgen.replaceWithFixedLength",
-                "key": "alt+X"
-            },
-			{
-                "command": "docgen.genFunctionDesc",
-                "key": "alt+C"
-            },
-			{
-                "command": "docgen.genSingleLineFuncDes",
-                "key": "alt+V"
-            },
-			{
-                "command": "docgen.test",
-                "key": "alt+B"
-            }
-        ]
+	  "name": "Generate Code",
+	  "commands": [
+		{
+		  "command": "docgen.genHeaderFile",
+		  "title": "Generate Header File"
+		},
+		{
+		  "command": "docgen.genSourceFile",
+		  "title": "Generate Source File"
+		},
+		{
+		  "command": "docgen.genDefinition",
+		  "title": "Generate Definition"
+		},
+		{
+		  "command": "docgen.genClass",
+		  "title": "Generate Class"
+		}
+	  ],
+	  "keybindings": [
+		{
+		  "command": "docgen.replaceWithVaryLength",
+		  "key": "alt+Z"
+		},
+		{
+		  "command": "docgen.replaceWithFixedLength",
+		  "key": "alt+X"
+		},
+		{
+		  "command": "docgen.genFunctionDesc",
+		  "key": "alt+C"
+		},
+		{
+		  "command": "docgen.genSingleLineFuncDes",
+		  "key": "alt+V"
+		},
+		{
+		  "command": "docgen.genDefinition",
+		  "key": "alt+N"
+		},
+		{
+		  "command": "docgen.shortcutInfo",
+		  "key": "alt+A"
+		}
+	  ],
+	  "menus": {
+		"editor/context": [
+		  {
+			"command": "docgen.genDefinition",
+			"group": "DOCGEN@1",
+			"when": "true"
+		  },
+		  {
+			"command": "docgen.genClass",
+			"group": "DOCGEN@2",
+			"when": "true"
+		  },
+		  {
+			"command": "docgen.genHeaderFile",
+			"group": "DOCGEN@2",
+			"when": "true"
+		  },
+		  {
+			"command": "docgen.genSourceFile",
+			"group": "DOCGEN@2",
+			"when": "true"
+		  }
+		]}
 	},
 	"repository": {
-		"type": "git",
-		"url": "https://github.com/kingame96/DocumentGeneration"
+	  "type": "git",
+	  "url": "git+https://github.com/kingame96/DocumentGeneration.git"
 	},
 	"scripts": {
-		"lint": "eslint .",
-		"pretest": "npm run lint",
-		"test": "node ./test/runTest.js"
+	  "lint": "eslint .",
+	  "pretest": "npm run lint",
+	  "test": "node ./test/runTest.js"
 	},
 	"devDependencies": {
-        "@types/vscode": "^1.65.0",
-        "@types/glob": "^7.2.0",
-        "@types/mocha": "^9.1.0",
-        "@types/node": "14.x",
-        "eslint": "^8.9.0",
-        "glob": "^7.2.0",
-        "mocha": "^9.2.1",
-        "typescript": "^4.5.5",
-        "@vscode/test-electron": "^2.1.2"
-    }
-
-}
+	  "@types/vscode": "^1.65.0",
+	  "@types/glob": "^7.2.0",
+	  "@types/mocha": "^9.1.0",
+	  "@types/node": "14.x",
+	  "eslint": "^8.9.0",
+	  "glob": "^7.2.0",
+	  "mocha": "^9.2.1",
+	  "typescript": "^4.5.5",
+	  "@vscode/test-electron": "^2.1.2"
+	},
+	"bugs": {
+	  "url": "https://github.com/kingame96/DocumentGeneration/issues"
+	},
+	"homepage": "https://github.com/kingame96/DocumentGeneration#readme",
+	"directories": {
+	  "test": "test"
+	},
+	"author": "",
+	"license": "ISC"
+  }
+  
